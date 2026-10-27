@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Интернет-магазин</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7F5;--card:#FFFFFF;--ink:#12161A;--muted:#4A5560;--line:#E1E5E0;--accent:#1F6B4F;--on-accent:#FFFFFF;--ph:#E4E8E2;--btn:#12161A;--on-btn:#FFFFFF;--foot:#12161A;--on-foot:#E6E9E5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#101412;--card:#1A201D;--ink:#F1F3F0;--muted:#A9B2AB;--line:#2A322E;--accent:#5DBE95;--on-accent:#0B1A13;--ph:#242C28;--btn:#F1F3F0;--on-btn:#101412;--foot:#0A0D0B;--on-foot:#E6E9E5}}
+:root[data-theme="dark"]{--bg:#101412;--card:#1A201D;--ink:#F1F3F0;--muted:#A9B2AB;--line:#2A322E;--accent:#5DBE95;--on-accent:#0B1A13;--ph:#242C28;--btn:#F1F3F0;--on-btn:#101412;--foot:#0A0D0B;--on-foot:#E6E9E5}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',-apple-system,Arial,sans-serif}
+a{color:var(--ink);text-decoration:none}
+a:hover{color:var(--accent)}
+button{font:inherit;cursor:pointer}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+header{background:var(--card);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px}
+.logo{font-size:22px;font-weight:800;letter-spacing:-.02em}
+nav{display:flex;gap:22px;font-size:15px;font-weight:500}
+.cart{position:relative;width:44px;height:44px;border:0;border-radius:22px;background:var(--accent);display:flex;align-items:center;justify-content:center}
+.cart svg{stroke:var(--on-accent)}
+.cart b{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--btn);color:var(--on-btn);font-size:12px;display:flex;align-items:center;justify-content:center}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:28px;align-items:center;padding-top:36px;padding-bottom:36px}
+.eyebrow{font-size:13px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+h1{margin:12px 0 16px;font-size:clamp(34px,8vw,56px);line-height:1.05;font-weight:800;letter-spacing:-.03em}
+.lead{margin:0 0 24px;font-size:17px;line-height:1.5;color:var(--muted);max-width:480px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{height:52px;padding:0 28px;border-radius:26px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-weight:700;font-size:16px;display:inline-flex;align-items:center}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.main:hover{color:var(--on-accent)}
+.photo{min-height:300px;border-radius:24px;background:var(--ph);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:15px}
+h2{margin:0 0 20px;font-size:clamp(26px,5vw,32px);font-weight:800;letter-spacing:-.02em}
+.sec{padding-top:20px;padding-bottom:36px}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:14px}
+.cat{height:160px;border-radius:20px;padding:20px;display:flex;align-items:flex-end;font-size:21px;font-weight:700;color:#12161A}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
+.head a{font-size:15px;font-weight:700;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.card{background:var(--card);border-radius:20px;padding:10px;display:flex;flex-direction:column;gap:10px}
+.card .ph{height:170px;border-radius:14px;background:var(--ph);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+.card .n{padding:0 6px;font-size:15px;font-weight:500}
+.card .p{padding:0 6px;font-size:19px;font-weight:800}
+.add{margin:0 6px 6px;height:44px;border:0;border-radius:22px;background:var(--btn);color:var(--on-btn);font-size:15px;font-weight:700}
+.perks{background:var(--card);border-radius:24px;padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:22px}
+.perks div b{display:block;font-size:18px;margin-bottom:6px}
+.perks div span{font-size:15px;line-height:1.5;color:var(--muted)}
+footer{background:var(--foot);color:var(--on-foot);margin-top:20px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-top:36px;padding-bottom:36px;font-size:15px}
+footer a{color:var(--on-foot);margin-right:20px}
+@media (max-width:640px){nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar" style="max-width:1240px">
+<a class="logo" href="#">[Название]</a>
+<nav><a href="#catalog">Каталог</a><a href="#">Новинки</a><a href="#">Акции</a><a href="#">Доставка</a><a href="#">Контакты</a></nav>
+<button class="cart" aria-label="Корзина">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h15l-2 9H8z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+<b id="count">0</b>
+</button>
+</div>
+</header>
+
+<main>
+<section class="wrap hero">
+<div>
+<span class="eyebrow">Новая коллекция</span>
+<h1>Всё лучшее — в одном месте</h1>
+<p class="lead">Короткое описание магазина и главного предложения. [ВАШ ТЕКСТ]</p>
+<div class="btns"><a class="btn main" href="#catalog">Перейти в каталог</a><a class="btn" href="#">Акции</a></div>
+</div>
+<div class="photo">Главное фото</div>
+</section>
+
+<section class="wrap sec">
+<h2>Категории</h2>
+<div class="cats">
+<a class="cat" href="#" style="background:#E9E4D8">[Категория 1]</a>
+<a class="cat" href="#" style="background:#DDE3EA">[Категория 2]</a>
+<a class="cat" href="#" style="background:#E6DDE3">[Категория 3]</a>
+</div>
+</section>
+
+<section class="wrap sec" id="catalog">
+<div class="head"><h2>Популярные товары</h2><a href="#">Смотреть все</a></div>
+<div class="grid">
+<article class="card"><div class="ph">Фото товара</div><div class="n">[Название товара]</div><div class="p">[Цена] ₽</div><button class="add">В корзину</button></article>
+<article class="card"><div class="ph">Фото товара</div><div class="n">[Название товара]</div><div class="p">[Цена] ₽</div><button class="add">В корзину</button></article>
+<article class="card"><div class="ph">Фото товара</div><div class="n">[Название товара]</div><div class="p">[Цена] ₽</div><button class="add">В корзину</button></article>
+<article class="card"><div class="ph">Фото товара</div><div class="n">[Название товара]</div><div class="p">[Цена] ₽</div><button class="add">В корзину</button></article>
+</div>
+</section>
+
+<section class="wrap sec">
+<div class="perks">
+<div><b>Быстрая доставка</b><span>[Условия доставки]</span></div>
+<div><b>Удобная оплата</b><span>[Способы оплаты]</span></div>
+<div><b>Возврат и обмен</b><span>[Условия возврата]</span></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div style="font-size:22px;font-weight:800">[Название]</div>
+<div><a href="#">Каталог</a><a href="#">Доставка</a><a href="#">Контакты</a></div>
+<div style="color:#AEB6AD">[Телефон] · [Эл. почта]</div>
+</div>
+</footer>
+
+<script>
+var n=0,c=document.getElementById('count');
+document.querySelectorAll('.add').forEach(function(b){
+b.addEventListener('click',function(){n++;c.textContent=n;b.textContent='Добавлено';setTimeout(function(){b.textContent='В корзину'},1200);});
+});
+</script>
+</body>
+</html>
