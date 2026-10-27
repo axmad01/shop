@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kappou Hiroki Arakawa — японская кухня в центре Москвы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;700&family=Noto+Serif+JP:wght@500&text=%E5%89%B2%E7%83%B9&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E0D0C;--bg2:#171513;--ink:#F3EEE6;--muted:#A39C92;--line:#2B2825;--accent:#C8452B;--on-accent:#FFFFFF;--at:#E8684B;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#F5F1EA;--bg2:#FFFFFF;--ink:#1A1714;--muted:#5E574F;--line:#DDD6CA;--accent:#B23A22;--at:#B23A22}}
+:root[data-theme="light"]{--bg:#F5F1EA;--bg2:#FFFFFF;--ink:#1A1714;--muted:#5E574F;--line:#DDD6CA;--accent:#B23A22;--at:#B23A22}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',-apple-system,Arial,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.w{max-width:1160px;margin:0 auto;padding:0 22px}
+.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;letter-spacing:-.01em}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--at)}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.logo{font-size:24px}
+.logo i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-left:6px}
+nav{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 26px;border-radius:24px;border:1px solid var(--ink);font-weight:700;font-size:15px}
+.btn.m{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{opacity:.88}
+.hero{position:relative;overflow:hidden;padding:56px 0 72px}
+.kanji{position:absolute;right:-10px;top:-10px;font-family:'Noto Serif JP','Hiragino Mincho ProN',serif;font-size:clamp(180px,38vw,420px);line-height:1;color:var(--accent);opacity:.16;pointer-events:none;user-select:none}
+.hero h1{position:relative;margin:18px 0 20px;font-size:clamp(46px,12vw,124px);line-height:.95}
+.hero p.lead{position:relative;max-width:520px;margin:0 0 32px;font-size:18px;color:var(--muted)}
+.btns{position:relative;display:flex;flex-wrap:wrap;gap:12px}
+.stats{position:relative;margin-top:56px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.stats div{background:var(--bg);padding:20px}
+.stats b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;font-weight:500}
+.stats span{font-size:13px;color:var(--muted)}
+section.s{padding:72px 0;border-top:1px solid var(--line)}
+h2{margin:10px 0 36px;font-size:clamp(34px,7vw,56px);line-height:1.05}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:36px;align-items:center}
+.about p{margin:0 0 16px;color:var(--muted);font-size:17px}
+.ph{border-radius:18px;background:linear-gradient(135deg,var(--bg2),var(--line));display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:12px 56px}
+.menu h3{grid-column:1/-1;margin:24px 0 0;font-size:28px}
+.item{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
+.item b{display:block;font-weight:700;font-size:16px}
+.item span{font-size:14px;color:var(--muted)}
+.item em{font-style:normal;font-weight:700;white-space:nowrap}
+.note{margin-top:20px;font-size:13px;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:12px}
+.gal .ph{aspect-ratio:4/5}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:20px}
+.bars{display:grid;gap:14px}
+.bar{display:grid;grid-template-columns:110px 1fr 44px;align-items:center;gap:12px;font-size:14px}
+.bar i{display:block;height:6px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.bar i u{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:3px}
+.bar span{text-align:right;color:var(--muted)}
+.q{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px}
+.q p{margin:0 0 16px;font-size:21px;line-height:1.35}
+.q span{font-size:13px;color:var(--muted)}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:32px}
+.info h4{margin:0 0 8px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--at)}
+.info p{margin:0;color:var(--muted)}
+.info a{color:var(--ink);border-bottom:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px}
+@media (max-width:700px){nav{display:none}.bar{grid-template-columns:90px 1fr 40px}}
+</style>
+</head>
+<body>
+<header>
+<div class="w">
+<a class="logo serif" href="#top">Hiroki Arakawa<i></i></a>
+<nav><a href="#about">О ресторане</a><a href="#menu">Меню</a><a href="#photo">Галерея</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+<a class="btn m" href="tel:+79670009808">Забронировать</a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<span class="kanji" aria-hidden="true">割烹</span>
+<div class="w">
+<span class="eyebrow">Японская кухня · Омакасе · Москва</span>
+<h1 class="serif">Kappou Hiroki<br>Arakawa</h1>
+<p class="lead">Небольшой ресторан у Красной площади, где шеф готовит на ваших глазах из свежей рыбы и морепродуктов высшего качества.</p>
+<div class="btns"><a class="btn m" href="tel:+79670009808">Забронировать стол</a><a class="btn" href="#menu">Смотреть меню</a></div>
+<div class="stats">
+<div><b>4,6</b><span>рейтинг на Яндекс Картах</span></div>
+<div><b>276</b><span>оценок гостей</span></div>
+<div><b>2026</b><span>награда «Хорошее место»</span></div>
+<div><b>от 3&nbsp;500&nbsp;₽</b><span>средний чек</span></div>
+</div>
+</div>
+</section>
+
+<section class="s" id="about">
+<div class="w about">
+<div>
+<span class="eyebrow">О ресторане</span>
+<h2 class="serif">Тонкий вкус, тишина и мастерство шефа</h2>
+<p>Каппо — японская традиция, при которой повар готовит прямо перед гостем. Здесь можно наблюдать за работой мастера и попробовать блюда, которые редко встретишь в Москве.</p>
+<p>Продукты привозят свежими: мурманский лосось, сахалинский гребешок, краб волосатик. [ВАШ ТЕКСТ О ШЕФЕ И ИСТОРИИ]</p>
+</div>
+<div class="ph" style="aspect-ratio:4/5">Фото интерьера</div>
+</div>
+</section>
+
+<section class="s" id="menu">
+<div class="w">
+<span class="eyebrow">Меню</span>
+<h2 class="serif">Избранное из меню</h2>
+<div class="menu">
+<h3 class="serif">Закуски и супы</h3>
+<div class="item"><div><b>Креветки темпура</b><span>Три лангустина в лёгкой темпуре, соус на основе сои и тунцовой стружки · 120 г</span></div><em>1&nbsp;700&nbsp;₽</em></div>
+<div class="item"><div><b>Мисо с лососем</b><span>Бульон на комбу и тунцовой стружке, паста мисо, лосось и вакамэ · 180 г</span></div><em>700&nbsp;₽</em></div>
+<h3 class="serif">Суши</h3>
+<div class="item"><div><b>Суши с гребешком</b><span>Сахалинский гребешок на рисе с заправкой ака-шари · 22 г</span></div><em>700&nbsp;₽</em></div>
+<div class="item"><div><b>Суши с крабом</b><span>Краб волосатик, рис ака-шари, капля васаби · 22 г</span></div><em>650&nbsp;₽</em></div>
+<div class="item"><div><b>Суши с лососем</b><span>Свежий мурманский лосось · 22 г</span></div><em>440&nbsp;₽</em></div>
+<div class="item"><div><b>Суши-торо с лососем</b><span>Нежное масляное брюшко лосося · 22 г</span></div><em>500&nbsp;₽</em></div>
+<h3 class="serif">Роллы</h3>
+<div class="item"><div><b>Хосомаки с лососем</b><span>Лосось, васаби, нори, имбирь · 100 г</span></div><em>800&nbsp;₽</em></div>
+<div class="item"><div><b>Хосомаки с угрём</b><span>Угорь, васаби, нори, имбирь · 100 г</span></div><em>900&nbsp;₽</em></div>
+<div class="item"><div><b>Калифорния с лососем</b><span>Лосось, авокадо, японский майонез, икра тобико · 150 г</span></div><em>2&nbsp;300&nbsp;₽</em></div>
+<div class="item"><div><b>Эдомаэ маки</b><span>Лосось, угорь, красная креветка, тобико, тофу койя, шиитаке · 190 г</span></div><em>2&nbsp;400&nbsp;₽</em></div>
+</div>
+<p class="note">Цены по данным Яндекс Карт на 4 октября. Актуальное меню уточняйте у ресторана.</p>
+</div>
+</section>
+
+<section class="s" id="photo">
+<div class="w">
+<span class="eyebrow">Галерея</span>
+<h2 class="serif">Атмосфера и вкус</h2>
+<div class="gal">
+<div class="ph">Фото блюда</div><div class="ph">Фото зала</div><div class="ph">Фото шефа</div>
+<div class="ph">Фото суши</div><div class="ph">Фото интерьера</div><div class="ph">Фото посуды</div>
+</div>
+</div>
+</section>
+
+<section class="s" id="reviews">
+<div class="w">
+<span class="eyebrow">Отзывы гостей</span>
+<h2 class="serif">Что говорят о нас</h2>
+<div class="rev">
+<div class="bars" aria-label="Доля положительных отзывов по темам">
+<div class="bar"><b>Шеф</b><i><u style="width:100%"></u></i><span>100%</span></div>
+<div class="bar"><b>Атмосфера</b><i><u style="width:95%"></u></i><span>95%</span></div>
+<div class="bar"><b>Блюда</b><i><u style="width:87%"></u></i><span>87%</span></div>
+<div class="bar"><b>Рыба</b><i><u style="width:80%"></u></i><span>80%</span></div>
+<div class="bar"><b>Суши и роллы</b><i><u style="width:77%"></u></i><span>77%</span></div>
+<div class="bar"><b>Персонал</b><i><u style="width:71%"></u></i><span>71%</span></div>
+<span style="font-size:13px;color:var(--muted)">Доля положительных отзывов по теме, Яндекс Карты</span>
+</div>
+<div class="q"><p class="serif">«Искали место для особого вечера. Интерьер продуман до мелочей, а рыба невероятно свежая.»</p><span>Гость · Яндекс Карты</span></div>
+<div class="q"><p class="serif">«Омакасе от шефа — гастрономический опыт, который запоминается. Можно часами наблюдать за работой мастера.»</p><span>Гость · Яндекс Карты</span></div>
+</div>
+</div>
+</section>
+
+<section class="s" id="contacts">
+<div class="w">
+<span class="eyebrow">Контакты</span>
+<h2 class="serif">Приходите в гости</h2>
+<div class="info">
+<div><h4>Адрес</h4><p>Москва, ул. Охотный Ряд, 2, 1 этаж. Рядом метро «Охотный Ряд».</p></div>
+<div><h4>Бронирование</h4><p><a href="tel:+79670009808">+7 (967) 000-98-08</a><br><a href="https://wa.me/79670009808">WhatsApp</a> · <a href="https://t.me/RestoHiroki">Telegram</a></p></div>
+<div><h4>Часы работы</h4><p>[ЧАСЫ РАБОТЫ]</p></div>
+<div><h4>Сайт</h4><p><a href="https://www.hiroki.ru/">hiroki.ru</a><br>Доставка, еда навынос, оплата картой и по QR</p></div>
+</div>
+<div class="btns" style="margin-top:44px"><a class="btn m" href="tel:+79670009808">Забронировать стол</a></div>
+</div>
+</section>
+</main>
+
+<footer><div class="w">© Kappou Hiroki Arakawa · Москва. Дизайн-концепт сайта.</div></footer>
+</body>
+</html>
